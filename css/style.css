@@ -32,19 +32,21 @@ span.logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 3vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .left {
   font-size: 1.8rem;
   font-weight: bold;
+  margin-top: 2vh;
 }
 
-.right {
-  font-size: 1.5rem;
-  font-weight: bold;
+.nav-link {
+  display: block;
+  padding: 1rem 1rem !important;
+  font-size: 1.2rem !important;
+  color: white !important;
 }
 /*# sourceMappingURL=style.css.map */
