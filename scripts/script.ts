@@ -20,18 +20,20 @@ class Animal {
         <div class = "col">
         <div class="card" style="width: 18rem;">
         <img src="${this.img}" class="card-img-top" alt="...">
-        <div class="card-body">`
-    }
-    displayBottom() {
-        return `
+        <div class="card-body">
         <h5 class = "cart-title"> ${this.name}</h5>
         <h6 class = "cart-title"> ${this.gender}</h6> 
         <h6 class = "cart-title"> ${this.age}</h6>
         <h6 class = "cart-title"> ${this.size}</h6>
-        <h6 class = "cart-title"> ${this.vaccine}</h6>
-      </div>
-    </div>
-    </div>`;
+        <h6 class = "cart-title"> ${this.vaccine}</h6>  
+`
+
+    }
+    displayBottom() {
+        return `        
+        </div>
+        </div>
+        </div>`;
     }
 
     display() {
@@ -82,7 +84,7 @@ let animals: Array<Animal> = [];
 
 new Animal("Rocky", "Male", 4, "medium", true, "img/turtle_640.jpg");
 new Animal("Roger", "Male", 2, "small", true, "img/rabbit_640.jpg");
-new Cat("Cat1", "Female", 8, "small", false, "img/cat_640.jpg", "russian-blue", "silver-gray", "https://en.wikipedia.org/wiki/Russian_Blue");
+new Cat("Fidel Catstro ", "Male", 8, "small", false, "img/cat_640.jpg", "russian-blue", "silver-gray", "https://en.wikipedia.org/wiki/Russian_Blue");
 new Cat("Cat2", "Female", 7, "small", true, "img/cat2_640.jpg", "Birman", "white", "https://en.wikipedia.org/wiki/Birman");
 new Dog("Dog1", "Male", 2, "medium", true, "img/dog_640.jpg", "Bullterrier", true);
 new Dog("Dog2", "Female", 5, "large", true, "img/dog2_640.jpg", "Husky", true);
