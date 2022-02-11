@@ -2,8 +2,13 @@ body, html {
     height: 100%;
 }
 
-span.logo {
-    color: white
+.d-inline-block {
+    margin-left: 1vw;
+    margin-top: 0.5vh;
+}
+
+p {
+    margin:0 !important;
 }
 
  /* Position and center the image to scale on all screens */
@@ -42,6 +47,11 @@ span.logo {
     padding: 1rem 1rem !important;
     font-size: 1.2rem !important;
     color: white !important;
+}
+
+.card-img-top {
+    height: 250px !important;
+    width: auto;
 }
 
 // @media (min-width: 992px){
