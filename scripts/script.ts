@@ -21,7 +21,7 @@ class Animal {
         <div class="card h-100 shadow mb-5 bg-body rounded" style="width: 18rem;">
         <img src="${this.img}" class="card-img-top" alt="...">
         <div class="card-body">
-        <h5 class = "cart-title text-center text-light bg-dark"> ${this.name}</h5>
+        <h4 class = "cart-title text-center text-light bg-dark"> ${this.name}</h4>
         <h6 class = "cart-title">Gender: ${this.gender}</h6> 
         <h6 class = "cart-title">Age: ${this.age}</h6>
         <h6 class = "cart-title">Size: ${this.size}</h6>
@@ -83,7 +83,7 @@ let animals: Array<Animal> = [];
 
 new Animal("Donnashello", "Male", 28, "medium", true, "img/turtle_640.jpg");
 new Animal("Rabbit DeNiro", "Male", 2, "small", true, "img/rabbit_640.jpg");
-new Animal("Marty McFly", "Male", 2, "small", true, "img/parrott_640.jpg");
+new Animal("Marty McFly", "Male", 1, "small", true, "img/parrott_640.jpg");
 new Cat("Fidel Catstro", "Male", 8, "small", false, "img/cat_russian_blue.jpg", "russian-blue", "silver-gray", "en.wikipedia.org/wiki/Russian_Blue");
 new Cat("Cleocatra", "Female", 7, "small", true, "img/cat_birman.jpg", "Birman", "white", "en.wikipedia.org/wiki/Birman");
 new Cat("Cat Stevens", "Female", 4, "small", true, "img/cat_scotish.jpg", "Scottish Fold", "white", "en.wikipedia.org/wiki/Scottish_Fold");
@@ -93,3 +93,15 @@ new Dog("Woofi Goldberg", "Female", 6, "large", false, "img/dog2_640.jpg", "Husk
 animals.forEach((val) => {
     (document.getElementById("row") as HTMLElement).innerHTML += val.display();
 })
+
+// SORT FUNCTION
+
+
+function sortVal() {
+    animals.sort((a, b) => b.age - a.age);
+    (document.getElementById("row") as HTMLElement).innerHTML = ``;
+    animals.forEach((val) => {
+        (document.getElementById("row") as HTMLElement).innerHTML += val.display();
+    }
+    )
+}

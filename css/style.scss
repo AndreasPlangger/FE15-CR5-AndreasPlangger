@@ -1,5 +1,6 @@
 body, html {
     height: 100%;
+    font-family: 'Exo', sans-serif, "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .d-inline-block {
@@ -9,6 +10,11 @@ body, html {
 
 p {
     margin:0 !important;
+}
+
+.h4-card-title {
+    color: red !important;
+    // font-weight: bolder;
 }
 
  /* Position and center the image to scale on all screens */
