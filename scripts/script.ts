@@ -51,8 +51,6 @@ class Cat extends Animal {
         this.urlBreed = urlBreed;
     }
 
-
-
     displayTop() {
         return `
         ${super.displayTop()}
@@ -98,7 +96,7 @@ animals.forEach((val) => {
 
 
 function sortVal() {
-    animals.sort((a, b) => b.age - a.age);
+    animals.sort((a, b) => a.age - b.age);
     // Empty container before sorted printout
     (document.getElementById("row") as HTMLElement).innerHTML = ``;
     animals.forEach((val) => {
