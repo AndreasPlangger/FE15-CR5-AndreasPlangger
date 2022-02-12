@@ -62,7 +62,7 @@ p {
      object-fit: cover;
 }
 
-@media screen and (max-width: 696px) {
+@media screen and (max-width: 695px) {
   .card-img-top {
     display: none !important;
   }
