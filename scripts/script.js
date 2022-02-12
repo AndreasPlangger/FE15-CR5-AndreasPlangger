@@ -1,4 +1,5 @@
 "use strict";
+// PARENT CLASS ANIMAL
 class Animal {
     constructor(name, gender, age, size, vaccine, img) {
         this.name = name;
@@ -11,27 +12,28 @@ class Animal {
     }
     displayTop() {
         return `
-        <div class = "col">
-        <div class="card h-100 shadow mb-5 bg-body rounded" style="width: 18rem;">
-        <img src="${this.img}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h4 class = "cart-title text-center text-light bg-dark"> ${this.name}</h4>
-        <h6 class = "cart-title">Gender: ${this.gender}</h6> 
-        <h6 class = "cart-title">Age: ${this.age}</h6>
-        <h6 class = "cart-title">Size: ${this.size}</h6>
-        <h6 class = "cart-title bg-${this.vaccine ? "success" : "danger"} text-center p-2"> ${this.vaccine}</h6>
-        `;
+            <div class = "col">
+            <div class="card h-100 shadow mb-5 bg-body rounded" style="width: 18rem;">
+            <img src="${this.img}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h4 class = "cart-title text-center text-light bg-dark"> ${this.name}</h4>
+            <h6 class = "cart-title">Gender: ${this.gender}</h6> 
+            <h6 class = "cart-title">Age: ${this.age}</h6>
+            <h6 class = "cart-title">Size: ${this.size}</h6>
+            <h6 class = "cart-title bg-${this.vaccine ? "success" : "danger"} text-center text-white p-2">Vaccinated: ${this.vaccine}</h6>
+            `;
     }
     displayBottom() {
         return `        
-        </div>
-        </div>
-        </div>`;
+            </div>
+            </div>
+            </div>`;
     }
     display() {
         return this.displayTop() + this.displayBottom();
     }
 }
+// CHILD CLASS CAT
 class Cat extends Animal {
     constructor(name, gender, age, size, vaccine, img, breed, furColor, urlBreed) {
         super(name, gender, age, size, vaccine, img);
@@ -41,12 +43,13 @@ class Cat extends Animal {
     }
     displayTop() {
         return `
-        ${super.displayTop()}
-        <h6 class = "cart-title">Breed: ${this.breed}</h6>
-        <h6 class = "cart-title">Fur color: ${this.furColor}</h6>
-        <h6 class = "cart-title">Learn more: ${this.urlBreed}</h6>`;
+            ${super.displayTop()}
+            <h6 class = "cart-title">Breed: ${this.breed}</h6>
+            <h6 class = "cart-title">Fur color: ${this.furColor}</h6>
+            <h6 class = "cart-title"><span class = "fw-bold mb-1">Learn more:</span><span class = "link-primary"> ${this.urlBreed}</span></h6>`;
     }
 }
+// CHILD CLASS DOG
 class Dog extends Animal {
     constructor(name, gender, age, size, vaccine, img, breed, training) {
         super(name, gender, age, size, vaccine, img);
@@ -55,10 +58,11 @@ class Dog extends Animal {
     }
     displayTop() {
         return `${super.displayTop()}
-        <h6 class = "cart-title">Breed: ${this.breed}</h6>
-        <h6 class = "cart-title">Training: ${this.training}</h6>`;
+            <h6 class = "cart-title">Breed: ${this.breed}</h6>
+            <h6 class = "cart-title">Training: ${this.training}</h6>`;
     }
 }
+// ARRAY
 let animals = [];
 new Animal("Donnashello", "Male", 28, "medium", true, "img/turtle_640.jpg");
 new Animal("Rabbit DeNiro", "Male", 2, "small", true, "img/rabbit_640.jpg");
@@ -70,14 +74,14 @@ new Dog("Dogstoyevsky", "Male", 2, "medium", true, "img/dog_640.jpg", "Bullterri
 new Dog("Karl Barx", "Male", 5, "large", true, "img/dog_terrier.jpg", "Terrier", true);
 new Dog("Woofi Goldberg", "Female", 6, "large", false, "img/dog2_640.jpg", "Husky", true);
 animals.forEach((val) => {
-    document.getElementById("row").innerHTML += val.display();
+    document.getElementById("container").innerHTML += val.display();
 });
 // SORT FUNCTION
 function sortVal() {
     animals.sort((a, b) => a.age - b.age);
     // Empty container before sorted printout
-    document.getElementById("row").innerHTML = ``;
+    document.getElementById("container").innerHTML = ``;
     animals.forEach((val) => {
-        document.getElementById("row").innerHTML += val.display();
+        document.getElementById("container").innerHTML += val.display();
     });
 }

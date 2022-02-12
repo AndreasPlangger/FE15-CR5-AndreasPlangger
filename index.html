@@ -25,19 +25,17 @@
 
 <body>
     <!-- NAVBAR -->
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
 
-            <!-- Left links -->
+            <!-- LEFT ELEMENTS -->
             <ul class="navbar-nav me-auto mb-lg-0">
-
                 <!-- LOGO -->
                 <a class="nav-item" href="#">
                     <img src="img/logo_640.png" alt="logo" width="60" height="52"
                         class="d-inline-block align-text-top animate__animated animate__backInRight">
                 </a>
-
+                <!-- LINKS -->
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <p class="text-info bg-dark">Home</p>
@@ -58,36 +56,33 @@
                         <p class="text-info bg-dark">Age</p>
                     </a>
                 </li>
+                <!-- SORT ICON AND BUTTON -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i style="margin-left: -2vw; transform: rotate(180deg);"
-                            class="fas fa-sort-amount-up"></i><button class="sort"
-                            style="opacity:0; margin: -2vw 0 0 -2vw;" onclick="sortVal()">Sort</button></a>
+                    <a class="nav-link" href="#">
+                        <p class="text-info bg-dark">Age <i style="color:white;transform: rotate(180deg);"
+                                class="fas fa-sort-amount-up"></i><button class="sort"
+                                style="opacity:0; margin: -2vw 0 0 -2vw;" onclick="sortVal()">Sort</button></p>
+                    </a>
                 </li>
             </ul>
         </div>
 
-        <!-- Right elements -->
+        <!-- RIGHT ELEMENTS -->
         <div class="d-flex align-items-center">
-            <!-- Icon -->
             <div class="row d-flex justify-content-center">
                 <!--Grid column-->
                 <div class="col-md-5 col-12">
-                    <!-- Email input -->
-                    <div class="form-outline form-white mb-0">
-                        <input type="email" id="form5Example21" class="form-control" />
+                    <!-- TEXT INPUT -->
+                    <div class="form-outline form-white">
+                        <input type="text" id="form5Example21" class="form-control" placeholder="Search" />
                     </div>
                 </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
+                <!-- SEARCH BUTTON -->
                 <div class="col-auto">
-                    <!-- Submit button -->
                     <button type="submit" class="btn btn-outline-light mb-0">
                         <p class="text-info bg-dark">Search</p>
-
                     </button>
                 </div>
-                <!--Grid column-->
             </div>
         </div>
     </nav>
@@ -95,17 +90,16 @@
     <!-- HERO image-->
     <div class="hero-image"></div>
 
-    <!-- MidPage HEADLINE -->
+    <!-- MIDPAGE HEADLINE -->
     <div class="alpha">
         <span class="left text-info bg-white ">Get to know your new, best friend!</span>
     </div>
 
     <!-- ROW AND COLUMN TEMPLATE -->
-    <div id="row" class="row justify-content-center p-5 g-4"></div>
+    <div id="container" class="row justify-content-center p-5 g-4"></div>
 
     <!-- FOOTER-->
     <footer class="bg-info text-center text-dark">
-        <!-- Grid container -->
         <div class="container p-4">
             <!-- Section: Social media -->
             <section class="mb-4">
@@ -133,7 +127,6 @@
                 <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i
                         class="fab fa-github"></i></a>
             </section>
-            <!-- Section: Social media -->
 
         </div>
         <!-- Grid container -->
