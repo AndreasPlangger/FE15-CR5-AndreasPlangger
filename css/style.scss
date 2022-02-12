@@ -60,9 +60,14 @@ p {
     height: 300px !important;
     width: auto;
     object-fit: cover;
+
 }
 
-// @media (min-width: 992px){
-// .sort {
-//     margin-left: -22vw;;
-// }}
+@media screen and (min-width: 696px) {
+    .contact-img-top{
+        // height: 300px !important;
+        // width: auto !important;
+        // object-fit: cover!important;
+        display: none !important;
+    }
+}
