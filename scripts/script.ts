@@ -99,6 +99,7 @@ animals.forEach((val) => {
 
 function sortVal() {
     animals.sort((a, b) => b.age - a.age);
+    // Empty container before sorted printout
     (document.getElementById("row") as HTMLElement).innerHTML = ``;
     animals.forEach((val) => {
         (document.getElementById("row") as HTMLElement).innerHTML += val.display();

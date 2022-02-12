@@ -12,10 +12,10 @@ p {
     margin:0 !important;
 }
 
-.h4-card-title {
-    color: red !important;
-    // font-weight: bolder;
-}
+// .h4-card-title {
+//     color: red !important;
+//     // font-weight: bolder;
+// }
 
  /* Position and center the image to scale on all screens */
 .hero-image {
@@ -55,12 +55,12 @@ p {
     color: white !important;
 }
 
-.p-5 {
-    padding-top: 1rem !important;
-    padding-right: 3rem !important;
-    padding-bottom: 3rem !important;
-    padding-left: 3rem !important;
-}
+// .p-5 {
+//     padding-top: 1rem !important;
+//     padding-right: 3rem !important;
+//     padding-bottom: 3rem !important;
+//     padding-left: 3rem !important;
+// }
 
 .card-img-top {
     height: 300px !important;
@@ -69,8 +69,8 @@ p {
 
 }
 
-@media screen and (min-width: 696px) {
-    .contact-img-top{
+@media screen and (max-width: 696px) {
+    .card-img-top{
         // height: 300px !important;
         // width: auto !important;
         // object-fit: cover!important;
